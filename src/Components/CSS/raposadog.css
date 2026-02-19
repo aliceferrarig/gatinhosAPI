@@ -1,0 +1,60 @@
+.raposa-container {
+  width: 420px;
+  margin: 60px auto;
+  padding: 30px;
+  border-radius: 18px;
+  background: #ffeede;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.raposa-container h2 {
+  margin-bottom: 20px;
+  color: #553325;
+}
+
+.botoes-raposa {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.btn-raposa {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  background-color: #553325;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-raposa:hover {
+  background-color: #2c1f1a;
+  box-shadow: 0 6px 18px rgba(68, 43, 34, 0.25);
+}
+
+.btn-raposa:active {
+  transform: scale(0.97);
+}
+
+.status-raposa {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #444;
+}
+
+.imagem-raposa {
+  width: 280px;
+  margin-top: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+  display: none;
+}

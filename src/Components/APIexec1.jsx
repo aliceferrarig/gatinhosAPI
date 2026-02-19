@@ -1,10 +1,10 @@
 import React from "react";
-import "/src/Components/CSS/exec1.css";
+import "/src/Components/CSS/gato.css";
 
 function APIexec1() {
   function buscarGatinho() {
-    var status = document.getElementById("status");
-    var imagem = document.getElementById("foto-gato");
+    let status = document.getElementById("status");
+    let imagem = document.getElementById("foto-gato");
 
     status.innerText = "Buscando Gatinho na Nuvem...";
 
@@ -12,12 +12,18 @@ function APIexec1() {
       .then(function (resposta) {
         return resposta.json();
       })
+
       .then(function (dados) {
-        var urlGato = dados[0].url;
+        let urlGato = dados[0].url;
+        let larguragato = dados[0].width;
 
         imagem.src = urlGato;
         imagem.style.display = "block";
         status.innerText = "Gatinho carregado com sucesso!";
+        // Resposta
+
+        status.innerText =
+          "Gatinho de " + larguragato + "px carregado com sucesso!";
       })
       .catch(function (erro) {
         status.innerText = "Ops! O mensageiro se perdeu.";
@@ -37,7 +43,7 @@ function APIexec1() {
         Aguardando comando...
       </p>
 
-      <img id="foto-gato" src="" alt="Gato" className="imagem-gato" />
+      <img id="foto-gato" alt="Gato" className="imagem-gato" />
     </div>
   );
 }
