@@ -1,20 +1,19 @@
-
 import "/src/Components/CSS/raposadog.css";
 
 function APIexecRaposa() {
 
   function buscarRaposa() {
     let status = document.getElementById("status-raposa");
-    let imagem = document.getElementById("foto-raposa");
+    let imagemRaposa = document.getElementById("foto-raposa");
 
     status.innerText = "Buscando Raposa...";
-    imagem.style.display = "none";
+    imagemRaposa.style.display = "none";
 
     fetch("https://randomfox.ca/floof/")
       .then(res => res.json())
       .then(dados => {
-        imagem.src = dados.image;
-        imagem.style.display = "block";
+        imagemRaposa.src = dados.image;
+        imagemRaposa.style.display = "block";
         status.innerText = "Raposa carregada com sucesso!";
       })
       .catch(() => {
@@ -24,16 +23,16 @@ function APIexecRaposa() {
 
   function buscarCachorro() {
     let status = document.getElementById("status-raposa");
-    let imagem = document.getElementById("foto-raposa");
+    let imagemCachorro = document.getElementById("foto-cachorro");
 
     status.innerText = "Buscando Cachorrinho...";
-    imagem.style.display = "none";
+    imagemCachorro.style.display = "none";
 
     fetch("https://dog.ceo/api/breeds/image/random")
       .then(res => res.json())
       .then(dados => {
-        imagem.src = dados.message;
-        imagem.style.display = "block";
+        imagemCachorro.src = dados.message;
+        imagemCachorro.style.display = "block";
         status.innerText = "Cachorrinho carregado com sucesso!";
       })
       .catch(() => {
@@ -59,11 +58,19 @@ function APIexecRaposa() {
         Aguardando comando...
       </p>
 
-      <img
-        id="foto-raposa"
-        alt="Animal"
-        className="imagem-raposa"
-      />
+      <div className="imagens-container">
+        <img
+          id="foto-raposa"
+          alt="Raposa"
+          className="imagem-raposa"
+        />
+
+        <img
+          id="foto-cachorro"
+          alt="Cachorro"
+          className="imagem-raposa"
+        />
+      </div>
     </div>
   );
 }

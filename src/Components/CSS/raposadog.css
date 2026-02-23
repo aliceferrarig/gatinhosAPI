@@ -1,5 +1,5 @@
 .raposa-container {
-  width: 420px;
+  width: 650px; /* aumentei pra caber duas imagens */
   margin: 60px auto;
   padding: 30px;
   border-radius: 18px;
@@ -51,9 +51,17 @@
   color: #444;
 }
 
-.imagem-raposa {
-  width: 280px;
+/* NOVO container para as imagens */
+.imagens-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
   margin-top: 20px;
+  flex-wrap: wrap; /* evita quebrar layout em telas menores */
+}
+
+.imagem-raposa {
+  width: 260px; /* reduzi pra caber confortável */
   border-radius: 16px;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
   display: none;
